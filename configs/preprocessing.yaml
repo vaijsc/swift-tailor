@@ -1,0 +1,10 @@
+# kwargs for create_geometry_uv
+max_dim: 300 # Maximum values of xyz coordinates
+island_padding_percent: 2 # Padding percentage among islands
+
+# kwargs for interpolate_uv
+min_tolerate: 0.001 # Minimum tolerate percentage of number of vertices' overlapping
+max_tolerate: 1 # Maximum tolerate percentage of number of vertices' overlapping
+max_expected_ratio: 100 # Maximum expected ratio of (GIM ** 2) / Original number of vertices
+tolerate_eps: 1e-6 # Tolerate epsilon for binary search
+min_uv_size: 512 # Minimum size of gim

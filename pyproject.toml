@@ -1,0 +1,26 @@
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = "/(\\.git|\\.mypy_cache|\\data)/"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+known_third_party = ["PIL", "attr", "cv2", "numpy", "pydantic", "torch", "torchvision", "transformers", "wandb"]
+skip = [".git", "data", ".mypy_cache"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_return_any = true
+exclude = "/(\\.git|\\.mypy_cache|data)/"
+
+[tool.pyright]
+pythonVersion = "3.10"
+include = ["src", "garmentcode", "omages"]
